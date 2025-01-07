@@ -1,0 +1,27 @@
+:root {
+    --primary: rgb(80, 80, 80);
+}
+
+.nav {
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title h1 {
+    color: var(--primary);
+    padding-left: 20px;
+}
+
+.nav-img img {
+    width: 50px;
+    margin-bottom: -20px;
+    margin-top: 20px;
+}
+
+.nav-img {
+    align-items: center;
+    text-align: center;
+    margin-right: 25px;
+}

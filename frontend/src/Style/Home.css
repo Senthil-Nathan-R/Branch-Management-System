@@ -1,0 +1,151 @@
+:root {
+  --primary: rgb(80, 80, 80);
+  --icon-color: rgb(177, 177, 177);
+  --icon-hover-color: rgb(4, 184, 255);
+}
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  border: 1px solid rgb(221, 221, 221);
+  background-color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.container.fullscreen {
+  width: 100%;
+  overflow: hidden;
+  border-radius: none;
+  margin-top: 1px;
+}
+
+
+.container.medium-screen {
+  width: 80%;
+  margin: 20px auto;
+  padding: 10px;
+  margin-top: 100px;
+  border-radius: 8px;
+  padding-bottom: 80px;
+}
+
+.box-title h1 {
+  color: var(--primary);
+  padding: 10px;
+}
+
+.box-title {
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.icons {
+  color: var(--primary);
+  padding: 15px 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid rgb(221, 221, 221);
+}
+
+.icon-section {
+  display: flex;
+  align-items: center;
+}
+
+.icons input {
+  border: 1px solid rgb(200, 200, 200);
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 15px;
+  margin-left: 10px;
+}
+
+.icon {
+  color: var(--icon-color);
+  font-size: 27px;
+  margin-left: 10px;
+  margin-inline: 10px;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.add-icon {
+  font-size: 35px;
+  margin-right: 10px;
+  color: var(--icon-hover-color);
+}
+
+
+.branch-table-wrapper {
+  overflow-x: auto;
+  position: relative;
+}
+
+.branch-table {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  min-width: 1200px;
+}
+
+th,
+td {
+  text-align: left;
+  padding: 10px;
+  white-space: nowrap;
+  width: 180px;
+}
+
+.tr th {
+  background-color: white;
+  color: var(--icon-hover-color);
+  cursor: pointer;
+}
+
+
+.status-active{
+  width: 100px;
+  height: 30px;
+  color: black;
+  background-color: rgb(52, 249, 52);
+  border-radius: 10px;
+  text-align: center;
+  align-content: center;
+}
+
+
+.fixed-column {
+  position: sticky;
+  left: 0;
+  background-color: white;
+  z-index: 2;
+}
+
+.branch-table th.fixed-column {
+  z-index: 3;
+  background-color: white;
+}
+
+.fixed-column:nth-child(2) {
+  left: 49px;
+
+  z-index: 4;
+}
+
+.fixed-column:first-child {
+  left: 0;
+  z-index: 4;
+  width: 50px;
+}
+.no-row{
+  display: flex;
+  float: right;
+  align-items: center;
+}
+.no-row label{
+  color: var(--primary);
+}

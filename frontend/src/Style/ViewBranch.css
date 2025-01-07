@@ -1,0 +1,46 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+}
+
+.view-section {
+    width: 70%;
+    margin: auto;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    padding-bottom: 70px;
+}
+
+.view-section h2 {
+    text-align: center;
+    padding: 20px;
+}
+
+.branch-details {
+    width: 98.%;
+
+    padding-left: 30px;
+
+}
+
+.cancel {
+    display: flex;
+    float: right;
+    background-color: white;
+    border: 1px solid rgb(4, 184, 255);
+    margin: 10px;
+    margin-right: 100px;
+    padding: 10px 15px;
+    font-size: 17px;
+    font-weight: bolder;
+    color: rgb(4, 184, 255);
+    border-radius: 5px;
+    cursor: pointer;
+
+}

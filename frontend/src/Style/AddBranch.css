@@ -1,0 +1,118 @@
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f8f9fa;
+  margin: 0;
+  padding: 0;
+}
+
+form {
+  max-width: 1200px;
+  margin: 0px auto;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  margin-top: 50px;
+  margin-bottom: 50px;
+  padding-bottom: 70px;
+}
+
+h2,
+h3 {
+  color: #333333;
+  margin-bottom: 15px;
+  margin-top: 25px;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="number"],
+input[type="date"],
+select {
+  width: calc(50% - 20px);
+  margin: 10px;
+  padding: 10px;
+  font-size: 14px;
+  border: 1px solid #ced4da;
+  border-radius: 4px;
+  outline: none;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+select:focus {
+  border-color: black;
+
+}
+
+label {
+  display: block;
+  margin: 10px 0 5px 10px;
+  font-weight: bold;
+}
+
+.heading {
+  text-align: center;
+}
+
+.btn-submit {
+  background-color: rgb(4, 184, 255);
+  border: none;
+  margin: 10px;
+  margin-right: 40px;
+  padding: 10px 15px;
+  font-size: 17px;
+  font-weight: bolder;
+  color: white;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.btn-discard {
+  background-color: white;
+  border: 1px solid rgb(4, 184, 255);
+  margin: 10px;
+  margin-right: 20px;
+  padding: 10px 15px;
+  font-size: 17px;
+  font-weight: bolder;
+  color: rgb(4, 184, 255);
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+input[type="checkbox"] {
+  margin-left: 10px;
+}
+
+label[for="status"] {
+  display: inline-flex;
+  align-items: center;
+  margin: 10px;
+}
+
+.btn-add {
+  border: none;
+  background-color: white;
+}
+
+.addbank td input {
+  width: 100%;
+  margin-top: -10px;
+
+}
+
+@media (max-width: 768px) {
+
+  input[type="text"],
+  input[type="email"],
+  select {
+    width: calc(100% - 20px);
+  }
+
+  button {
+    width: 100%;
+    margin-top: 10px;
+  }
+}

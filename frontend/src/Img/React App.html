@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<!-- saved from url=(0031)http://localhost:3000/addbranch -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <link rel="icon" href="http://localhost:3000/favicon.ico">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#000000">
+    <meta name="description" content="Web site created using create-react-app">
+    <link rel="apple-touch-icon" href="http://localhost:3000/logo192.png">
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="http://localhost:3000/manifest.json">
+    <!--
+      Notice the use of  in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
+
+      Unlike "/favicon.ico" or "favicon.ico", "/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  <script defer="" src="./React App_files/bundle.js.download"></script><style>body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9pbmRleC5jc3MiXSwibmFtZXMiOltdLCJtYXBwaW5ncyI6IkFBQUE7RUFDRSxTQUFTO0VBQ1Q7O2NBRVk7RUFDWixtQ0FBbUM7RUFDbkMsa0NBQWtDO0FBQ3BDOztBQUVBO0VBQ0U7YUFDVztBQUNiIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XG4gIG1hcmdpbjogMDtcbiAgZm9udC1mYW1pbHk6IC1hcHBsZS1zeXN0ZW0sIEJsaW5rTWFjU3lzdGVtRm9udCwgJ1NlZ29lIFVJJywgJ1JvYm90bycsICdPeHlnZW4nLFxuICAgICdVYnVudHUnLCAnQ2FudGFyZWxsJywgJ0ZpcmEgU2FucycsICdEcm9pZCBTYW5zJywgJ0hlbHZldGljYSBOZXVlJyxcbiAgICBzYW5zLXNlcmlmO1xuICAtd2Via2l0LWZvbnQtc21vb3RoaW5nOiBhbnRpYWxpYXNlZDtcbiAgLW1vei1vc3gtZm9udC1zbW9vdGhpbmc6IGdyYXlzY2FsZTtcbn1cblxuY29kZSB7XG4gIGZvbnQtZmFtaWx5OiBzb3VyY2UtY29kZS1wcm8sIE1lbmxvLCBNb25hY28sIENvbnNvbGFzLCAnQ291cmllciBOZXcnLFxuICAgIG1vbm9zcGFjZTtcbn1cbiJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9BcHAuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0VBQ0UsVUFBVTtFQUNWLFNBQVM7RUFDVCxzQkFBc0I7QUFDeEIiLCJzb3VyY2VzQ29udGVudCI6WyIqIHtcbiAgcGFkZGluZzogMDtcbiAgbWFyZ2luOiAwO1xuICBib3gtc2l6aW5nOiBib3JkZXItYm94O1xufSJdLCJzb3VyY2VSb290IjoiIn0= */</style><style>
+:root{
+    --primary:rgb(80, 80, 80);
+}
+
+.nav{
+    display: flex;
+    height: 90px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.nav-title h1{
+    color: var(--primary);
+    padding: 10px; 
+    padding-left: 20px; 
+}
+
+.nav-img img{
+    width: 50px;
+    cursor: pointer;
+}
+
+.nav-img{
+    text-align: center;
+    padding: 10px;
+    cursor: default;
+    color:var(--primary);
+    padding-right: 20px;
+}
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9TdHlsZS9OYXZiYXIuY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiI7QUFDQTtJQUNJLHlCQUF5QjtBQUM3Qjs7QUFFQTtJQUNJLGFBQWE7SUFDYixZQUFZO0lBQ1osbUJBQW1CO0lBQ25CLDhCQUE4QjtBQUNsQzs7QUFFQTtJQUNJLHFCQUFxQjtJQUNyQixhQUFhO0lBQ2Isa0JBQWtCO0FBQ3RCOztBQUVBO0lBQ0ksV0FBVztJQUNYLGVBQWU7QUFDbkI7O0FBRUE7SUFDSSxrQkFBa0I7SUFDbEIsYUFBYTtJQUNiLGVBQWU7SUFDZixvQkFBb0I7SUFDcEIsbUJBQW1CO0FBQ3ZCIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbjpyb290e1xyXG4gICAgLS1wcmltYXJ5OnJnYig4MCwgODAsIDgwKTtcclxufVxyXG5cclxuLm5hdntcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBoZWlnaHQ6IDkwcHg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAganVzdGlmeS1jb250ZW50OiBzcGFjZS1iZXR3ZWVuO1xyXG59XHJcblxyXG4ubmF2LXRpdGxlIGgxe1xyXG4gICAgY29sb3I6IHZhcigtLXByaW1hcnkpO1xyXG4gICAgcGFkZGluZzogMTBweDsgXHJcbiAgICBwYWRkaW5nLWxlZnQ6IDIwcHg7IFxyXG59XHJcblxyXG4ubmF2LWltZyBpbWd7XHJcbiAgICB3aWR0aDogNTBweDtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxufVxyXG5cclxuLm5hdi1pbWd7XHJcbiAgICB0ZXh0LWFsaWduOiBjZW50ZXI7XHJcbiAgICBwYWRkaW5nOiAxMHB4O1xyXG4gICAgY3Vyc29yOiBkZWZhdWx0O1xyXG4gICAgY29sb3I6dmFyKC0tcHJpbWFyeSk7XHJcbiAgICBwYWRkaW5nLXJpZ2h0OiAyMHB4O1xyXG59Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>
+:root {
+    --primary: rgb(80, 80, 80);
+    --icon-color: rgb(177, 177, 177);
+    --icon-hover-color: rgb(4, 184, 255);
+  }
+  
+  .container {
+    border: 1px solid rgb(221, 221, 221);
+    width: 80%;
+    margin: auto;
+    margin-top: 100px;
+  }
+  
+  .box-title h1 {
+    color: var(--primary);
+    padding: 10px;
+  }
+  
+  .box-title {
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  
+  .icons {
+    color: var(--primary);
+    padding: 15px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgb(221, 221, 221);
+  }
+  
+  .icon-section {
+    display: flex;
+    align-items: center;
+  }
+  
+  .icons input {
+    border: 1px solid rgb(200, 200, 200);
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-size: 15px;
+    margin-left: 10px;
+  }
+  
+  .icon {
+    color: var(--icon-color);
+    font-size: 25px;
+    margin-left: 10px;
+    cursor: pointer;
+    transition: color 0.3s;
+  }
+  
+  .add-icon {
+    font-size: 35px;
+    margin-right: 10px;
+    color: var(--icon-hover-color);
+  }
+  
+  
+.branch-table-wrapper {
+    overflow-x: auto;
+    position: relative;
+  }
+  
+  .branch-table {
+    width: 100%;
+    border-collapse: collapse;
+    table-layout: fixed;
+    min-width: 1200px; 
+  }
+  
+   th, td {
+    text-align: left;
+    padding: 10px;
+    white-space: nowrap;
+    width: 180px; 
+  }
+  
+  .tr th {
+    background-color:#f6f6f6;
+    color: var(--icon-hover-color);
+    cursor: pointer;
+  }
+
+  th{
+    border-right: 1px solid #a09e9e; 
+  }
+  
+  .tr th:hover {
+    background-color: #f6f6f6;
+  }
+  
+  tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  tbody tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  
+  .fixed-column {
+    position: sticky;
+    left: 0;
+    background-color: #f6f6f6;
+    z-index: 2;
+    border-right: 1px solid #a09e9e; 
+  }
+  
+  .branch-table th.fixed-column {
+    z-index: 3;
+    background-color: #f6f6f6; 
+  }
+  
+  .fixed-column:nth-child(2) {
+    left: 49px;
+    
+    z-index: 4;
+  }
+  
+  .fixed-column:first-child {
+    left: 0; 
+    z-index: 4;
+    width: 50px;
+  }
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9TdHlsZS9Ib21lLmNzcyJdLCJuYW1lcyI6W10sIm1hcHBpbmdzIjoiO0FBQ0E7SUFDSSwwQkFBMEI7SUFDMUIsZ0NBQWdDO0lBQ2hDLG9DQUFvQztFQUN0Qzs7RUFFQTtJQUNFLG9DQUFvQztJQUNwQyxVQUFVO0lBQ1YsWUFBWTtJQUNaLGlCQUFpQjtFQUNuQjs7RUFFQTtJQUNFLHFCQUFxQjtJQUNyQixhQUFhO0VBQ2Y7O0VBRUE7SUFDRSwyQ0FBMkM7RUFDN0M7O0VBRUE7SUFDRSxxQkFBcUI7SUFDckIsa0JBQWtCO0lBQ2xCLGFBQWE7SUFDYiw4QkFBOEI7SUFDOUIsbUJBQW1CO0lBQ25CLDJDQUEyQztFQUM3Qzs7RUFFQTtJQUNFLGFBQWE7SUFDYixtQkFBbUI7RUFDckI7O0VBRUE7SUFDRSxvQ0FBb0M7SUFDcEMsa0JBQWtCO0lBQ2xCLGlCQUFpQjtJQUNqQixlQUFlO0lBQ2YsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0Usd0JBQXdCO0lBQ3hCLGVBQWU7SUFDZixpQkFBaUI7SUFDakIsZUFBZTtJQUNmLHNCQUFzQjtFQUN4Qjs7RUFFQTtJQUNFLGVBQWU7SUFDZixrQkFBa0I7SUFDbEIsOEJBQThCO0VBQ2hDOzs7QUFHRjtJQUNJLGdCQUFnQjtJQUNoQixrQkFBa0I7RUFDcEI7O0VBRUE7SUFDRSxXQUFXO0lBQ1gseUJBQXlCO0lBQ3pCLG1CQUFtQjtJQUNuQixpQkFBaUI7RUFDbkI7O0dBRUM7SUFDQyxnQkFBZ0I7SUFDaEIsYUFBYTtJQUNiLG1CQUFtQjtJQUNuQixZQUFZO0VBQ2Q7O0VBRUE7SUFDRSx3QkFBd0I7SUFDeEIsOEJBQThCO0lBQzlCLGVBQWU7RUFDakI7O0VBRUE7SUFDRSwrQkFBK0I7RUFDakM7O0VBRUE7SUFDRSx5QkFBeUI7RUFDM0I7O0VBRUE7SUFDRSx5QkFBeUI7RUFDM0I7O0VBRUE7SUFDRSx5QkFBeUI7RUFDM0I7OztFQUdBO0lBQ0UsZ0JBQWdCO0lBQ2hCLE9BQU87SUFDUCx5QkFBeUI7SUFDekIsVUFBVTtJQUNWLCtCQUErQjtFQUNqQzs7RUFFQTtJQUNFLFVBQVU7SUFDVix5QkFBeUI7RUFDM0I7O0VBRUE7SUFDRSxVQUFVOztJQUVWLFVBQVU7RUFDWjs7RUFFQTtJQUNFLE9BQU87SUFDUCxVQUFVO0lBQ1YsV0FBVztFQUNiIiwic291cmNlc0NvbnRlbnQiOlsiXHJcbjpyb290IHtcclxuICAgIC0tcHJpbWFyeTogcmdiKDgwLCA4MCwgODApO1xyXG4gICAgLS1pY29uLWNvbG9yOiByZ2IoMTc3LCAxNzcsIDE3Nyk7XHJcbiAgICAtLWljb24taG92ZXItY29sb3I6IHJnYig0LCAxODQsIDI1NSk7XHJcbiAgfVxyXG4gIFxyXG4gIC5jb250YWluZXIge1xyXG4gICAgYm9yZGVyOiAxcHggc29saWQgcmdiKDIyMSwgMjIxLCAyMjEpO1xyXG4gICAgd2lkdGg6IDgwJTtcclxuICAgIG1hcmdpbjogYXV0bztcclxuICAgIG1hcmdpbi10b3A6IDEwMHB4O1xyXG4gIH1cclxuICBcclxuICAuYm94LXRpdGxlIGgxIHtcclxuICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5ib3gtdGl0bGUge1xyXG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigyMjEsIDIyMSwgMjIxKTtcclxuICB9XHJcbiAgXHJcbiAgLmljb25zIHtcclxuICAgIGNvbG9yOiB2YXIoLS1wcmltYXJ5KTtcclxuICAgIHBhZGRpbmc6IDE1cHggMTBweDtcclxuICAgIGRpc3BsYXk6IGZsZXg7XHJcbiAgICBqdXN0aWZ5LWNvbnRlbnQ6IHNwYWNlLWJldHdlZW47XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgYm9yZGVyLWJvdHRvbTogMXB4IHNvbGlkIHJnYigyMjEsIDIyMSwgMjIxKTtcclxuICB9XHJcbiAgXHJcbiAgLmljb24tc2VjdGlvbiB7XHJcbiAgICBkaXNwbGF5OiBmbGV4O1xyXG4gICAgYWxpZ24taXRlbXM6IGNlbnRlcjtcclxuICB9XHJcbiAgXHJcbiAgLmljb25zIGlucHV0IHtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkIHJnYigyMDAsIDIwMCwgMjAwKTtcclxuICAgIGJvcmRlci1yYWRpdXM6IDVweDtcclxuICAgIHBhZGRpbmc6IDVweCAxMHB4O1xyXG4gICAgZm9udC1zaXplOiAxNXB4O1xyXG4gICAgbWFyZ2luLWxlZnQ6IDEwcHg7XHJcbiAgfVxyXG4gIFxyXG4gIC5pY29uIHtcclxuICAgIGNvbG9yOiB2YXIoLS1pY29uLWNvbG9yKTtcclxuICAgIGZvbnQtc2l6ZTogMjVweDtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgdHJhbnNpdGlvbjogY29sb3IgMC4zcztcclxuICB9XHJcbiAgXHJcbiAgLmFkZC1pY29uIHtcclxuICAgIGZvbnQtc2l6ZTogMzVweDtcclxuICAgIG1hcmdpbi1yaWdodDogMTBweDtcclxuICAgIGNvbG9yOiB2YXIoLS1pY29uLWhvdmVyLWNvbG9yKTtcclxuICB9XHJcbiAgXHJcbiAgXHJcbi5icmFuY2gtdGFibGUtd3JhcHBlciB7XHJcbiAgICBvdmVyZmxvdy14OiBhdXRvO1xyXG4gICAgcG9zaXRpb246IHJlbGF0aXZlO1xyXG4gIH1cclxuICBcclxuICAuYnJhbmNoLXRhYmxlIHtcclxuICAgIHdpZHRoOiAxMDAlO1xyXG4gICAgYm9yZGVyLWNvbGxhcHNlOiBjb2xsYXBzZTtcclxuICAgIHRhYmxlLWxheW91dDogZml4ZWQ7XHJcbiAgICBtaW4td2lkdGg6IDEyMDBweDsgXHJcbiAgfVxyXG4gIFxyXG4gICB0aCwgdGQge1xyXG4gICAgdGV4dC1hbGlnbjogbGVmdDtcclxuICAgIHBhZGRpbmc6IDEwcHg7XHJcbiAgICB3aGl0ZS1zcGFjZTogbm93cmFwO1xyXG4gICAgd2lkdGg6IDE4MHB4OyBcclxuICB9XHJcbiAgXHJcbiAgLnRyIHRoIHtcclxuICAgIGJhY2tncm91bmQtY29sb3I6I2Y2ZjZmNjtcclxuICAgIGNvbG9yOiB2YXIoLS1pY29uLWhvdmVyLWNvbG9yKTtcclxuICAgIGN1cnNvcjogcG9pbnRlcjtcclxuICB9XHJcblxyXG4gIHRoe1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2EwOWU5ZTsgXHJcbiAgfVxyXG4gIFxyXG4gIC50ciB0aDpob3ZlciB7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2O1xyXG4gIH1cclxuICBcclxuICB0Ym9keSB0cjpudGgtY2hpbGQoZXZlbikge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2Y5ZjlmOTtcclxuICB9XHJcbiAgXHJcbiAgdGJvZHkgdHI6aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2YxZjFmMTtcclxuICB9XHJcbiAgXHJcbiAgXHJcbiAgLmZpeGVkLWNvbHVtbiB7XHJcbiAgICBwb3NpdGlvbjogc3RpY2t5O1xyXG4gICAgbGVmdDogMDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmNmY2ZjY7XHJcbiAgICB6LWluZGV4OiAyO1xyXG4gICAgYm9yZGVyLXJpZ2h0OiAxcHggc29saWQgI2EwOWU5ZTsgXHJcbiAgfVxyXG4gIFxyXG4gIC5icmFuY2gtdGFibGUgdGguZml4ZWQtY29sdW1uIHtcclxuICAgIHotaW5kZXg6IDM7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjZmNmY2OyBcclxuICB9XHJcbiAgXHJcbiAgLmZpeGVkLWNvbHVtbjpudGgtY2hpbGQoMikge1xyXG4gICAgbGVmdDogNDlweDtcclxuICAgIFxyXG4gICAgei1pbmRleDogNDtcclxuICB9XHJcbiAgXHJcbiAgLmZpeGVkLWNvbHVtbjpmaXJzdC1jaGlsZCB7XHJcbiAgICBsZWZ0OiAwOyBcclxuICAgIHotaW5kZXg6IDQ7XHJcbiAgICB3aWR0aDogNTBweDtcclxuICB9Il0sInNvdXJjZVJvb3QiOiIifQ== */</style><style>body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+  }
+  
+  form {
+    max-width: 1200px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  }
+  
+  h2, h3 {
+    color: #333333;
+    margin-bottom: 15px;
+    margin-top: 25px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="number"],
+  input[type="date"],
+  select {
+    width: calc(50% - 20px);
+    margin: 10px;
+    padding: 10px;
+    font-size: 14px;
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    outline: none;
+  }
+  
+  input[type="text"]:focus,
+  input[type="email"]:focus,
+  select:focus {
+    border-color: black;
+   
+  }
+  
+  label {
+    display: block;
+    margin: 10px 0 5px 10px;
+    font-weight: bold;
+  }
+  
+  button {
+    margin: 15px 10px 0;
+    padding: 10px 20px;
+    font-size: 14px;
+    color: #ffffff;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+  
+  button[type="button"] {
+    background-color: #dc3545;
+  }
+  
+  button[type="button"]:hover {
+    background-color: #c82333;
+  }
+  
+  input[type="checkbox"] {
+    margin-left: 10px;
+  }
+  
+  label[for="status"] {
+    display: inline-flex;
+    align-items: center;
+    margin: 10px;
+  }
+  
+  @media (max-width: 768px) {
+    input[type="text"],
+    input[type="email"],
+    select {
+      width: calc(100% - 20px);
+    }
+  
+    button {
+      width: 100%;
+      margin-top: 10px;
+    }
+  }
+ 
+
+/*# sourceMappingURL=data:application/json;base64,eyJ2ZXJzaW9uIjozLCJzb3VyY2VzIjpbIndlYnBhY2s6Ly8uL3NyYy9TdHlsZS9BZGRCcmFuY2guY3NzIl0sIm5hbWVzIjpbXSwibWFwcGluZ3MiOiJBQUFBO0lBQ0ksOEJBQThCO0lBQzlCLHlCQUF5QjtJQUN6QixTQUFTO0lBQ1QsVUFBVTtFQUNaOztFQUVBO0lBQ0UsaUJBQWlCO0lBQ2pCLGlCQUFpQjtJQUNqQixhQUFhO0lBQ2IseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQix3Q0FBd0M7RUFDMUM7O0VBRUE7SUFDRSxjQUFjO0lBQ2QsbUJBQW1CO0lBQ25CLGdCQUFnQjtFQUNsQjs7RUFFQTs7Ozs7SUFLRSx1QkFBdUI7SUFDdkIsWUFBWTtJQUNaLGFBQWE7SUFDYixlQUFlO0lBQ2YseUJBQXlCO0lBQ3pCLGtCQUFrQjtJQUNsQixhQUFhO0VBQ2Y7O0VBRUE7OztJQUdFLG1CQUFtQjs7RUFFckI7O0VBRUE7SUFDRSxjQUFjO0lBQ2QsdUJBQXVCO0lBQ3ZCLGlCQUFpQjtFQUNuQjs7RUFFQTtJQUNFLG1CQUFtQjtJQUNuQixrQkFBa0I7SUFDbEIsZUFBZTtJQUNmLGNBQWM7SUFDZCx5QkFBeUI7SUFDekIsWUFBWTtJQUNaLGtCQUFrQjtJQUNsQixlQUFlO0lBQ2YsaUNBQWlDO0VBQ25DOztFQUVBO0lBQ0UseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UseUJBQXlCO0VBQzNCOztFQUVBO0lBQ0UsaUJBQWlCO0VBQ25COztFQUVBO0lBQ0Usb0JBQW9CO0lBQ3BCLG1CQUFtQjtJQUNuQixZQUFZO0VBQ2Q7O0VBRUE7SUFDRTs7O01BR0Usd0JBQXdCO0lBQzFCOztJQUVBO01BQ0UsV0FBVztNQUNYLGdCQUFnQjtJQUNsQjtFQUNGIiwic291cmNlc0NvbnRlbnQiOlsiYm9keSB7XHJcbiAgICBmb250LWZhbWlseTogQXJpYWwsIHNhbnMtc2VyaWY7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjZjhmOWZhO1xyXG4gICAgbWFyZ2luOiAwO1xyXG4gICAgcGFkZGluZzogMDtcclxuICB9XHJcbiAgXHJcbiAgZm9ybSB7XHJcbiAgICBtYXgtd2lkdGg6IDEyMDBweDtcclxuICAgIG1hcmdpbjogMjBweCBhdXRvO1xyXG4gICAgcGFkZGluZzogMjBweDtcclxuICAgIGJhY2tncm91bmQtY29sb3I6ICNmZmZmZmY7XHJcbiAgICBib3JkZXItcmFkaXVzOiA4cHg7XHJcbiAgICBib3gtc2hhZG93OiAwIDJweCA0cHggcmdiYSgwLCAwLCAwLCAwLjEpO1xyXG4gIH1cclxuICBcclxuICBoMiwgaDMge1xyXG4gICAgY29sb3I6ICMzMzMzMzM7XHJcbiAgICBtYXJnaW4tYm90dG9tOiAxNXB4O1xyXG4gICAgbWFyZ2luLXRvcDogMjVweDtcclxuICB9XHJcbiAgXHJcbiAgaW5wdXRbdHlwZT1cInRleHRcIl0sXHJcbiAgaW5wdXRbdHlwZT1cImVtYWlsXCJdLFxyXG4gIGlucHV0W3R5cGU9XCJudW1iZXJcIl0sXHJcbiAgaW5wdXRbdHlwZT1cImRhdGVcIl0sXHJcbiAgc2VsZWN0IHtcclxuICAgIHdpZHRoOiBjYWxjKDUwJSAtIDIwcHgpO1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gICAgcGFkZGluZzogMTBweDtcclxuICAgIGZvbnQtc2l6ZTogMTRweDtcclxuICAgIGJvcmRlcjogMXB4IHNvbGlkICNjZWQ0ZGE7XHJcbiAgICBib3JkZXItcmFkaXVzOiA0cHg7XHJcbiAgICBvdXRsaW5lOiBub25lO1xyXG4gIH1cclxuICBcclxuICBpbnB1dFt0eXBlPVwidGV4dFwiXTpmb2N1cyxcclxuICBpbnB1dFt0eXBlPVwiZW1haWxcIl06Zm9jdXMsXHJcbiAgc2VsZWN0OmZvY3VzIHtcclxuICAgIGJvcmRlci1jb2xvcjogYmxhY2s7XHJcbiAgIFxyXG4gIH1cclxuICBcclxuICBsYWJlbCB7XHJcbiAgICBkaXNwbGF5OiBibG9jaztcclxuICAgIG1hcmdpbjogMTBweCAwIDVweCAxMHB4O1xyXG4gICAgZm9udC13ZWlnaHQ6IGJvbGQ7XHJcbiAgfVxyXG4gIFxyXG4gIGJ1dHRvbiB7XHJcbiAgICBtYXJnaW46IDE1cHggMTBweCAwO1xyXG4gICAgcGFkZGluZzogMTBweCAyMHB4O1xyXG4gICAgZm9udC1zaXplOiAxNHB4O1xyXG4gICAgY29sb3I6ICNmZmZmZmY7XHJcbiAgICBiYWNrZ3JvdW5kLWNvbG9yOiAjMDA3YmZmO1xyXG4gICAgYm9yZGVyOiBub25lO1xyXG4gICAgYm9yZGVyLXJhZGl1czogNHB4O1xyXG4gICAgY3Vyc29yOiBwb2ludGVyO1xyXG4gICAgdHJhbnNpdGlvbjogYmFja2dyb3VuZC1jb2xvciAwLjNzO1xyXG4gIH1cclxuICBcclxuICBidXR0b246aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogIzAwNTZiMztcclxuICB9XHJcbiAgXHJcbiAgYnV0dG9uW3R5cGU9XCJidXR0b25cIl0ge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2RjMzU0NTtcclxuICB9XHJcbiAgXHJcbiAgYnV0dG9uW3R5cGU9XCJidXR0b25cIl06aG92ZXIge1xyXG4gICAgYmFja2dyb3VuZC1jb2xvcjogI2M4MjMzMztcclxuICB9XHJcbiAgXHJcbiAgaW5wdXRbdHlwZT1cImNoZWNrYm94XCJdIHtcclxuICAgIG1hcmdpbi1sZWZ0OiAxMHB4O1xyXG4gIH1cclxuICBcclxuICBsYWJlbFtmb3I9XCJzdGF0dXNcIl0ge1xyXG4gICAgZGlzcGxheTogaW5saW5lLWZsZXg7XHJcbiAgICBhbGlnbi1pdGVtczogY2VudGVyO1xyXG4gICAgbWFyZ2luOiAxMHB4O1xyXG4gIH1cclxuICBcclxuICBAbWVkaWEgKG1heC13aWR0aDogNzY4cHgpIHtcclxuICAgIGlucHV0W3R5cGU9XCJ0ZXh0XCJdLFxyXG4gICAgaW5wdXRbdHlwZT1cImVtYWlsXCJdLFxyXG4gICAgc2VsZWN0IHtcclxuICAgICAgd2lkdGg6IGNhbGMoMTAwJSAtIDIwcHgpO1xyXG4gICAgfVxyXG4gIFxyXG4gICAgYnV0dG9uIHtcclxuICAgICAgd2lkdGg6IDEwMCU7XHJcbiAgICAgIG1hcmdpbi10b3A6IDEwcHg7XHJcbiAgICB9XHJcbiAgfVxyXG4gXHJcbiJdLCJzb3VyY2VSb290IjoiIn0= */</style></head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"><section><div class="nav"><div class="nav-title"><h1>BRANCH MANAGEMENT SYSTEM</h1></div><div class="nav-img"><img src="./React App_files/img1.27f6ebedffe2bbc4ca9a.jpg" alt=""><h3>Senthil Nathan</h3></div></div><hr><form><h2>Manage Branch</h2><h3>1. Branch Details</h3><input type="text" name="branchCode" placeholder="Branch Code" required="" value="A001" fdprocessedid="196nzq"><input type="text" name="branchName" placeholder="Branch Name" required="" value="SPL - CORPORATE" fdprocessedid="0iljbc"><input type="text" name="branchShortName" placeholder="Branch Short Name" required="" value="SPL" fdprocessedid="1haew"><input type="text" name="doorNo" placeholder="Door/Flat/House No" value="NO.3" fdprocessedid="cpz9mb"><input type="text" name="street" placeholder="Street" value="SMITH ROAD" fdprocessedid="0howhs"><input type="text" name="pincode" placeholder="Pincode" required="" value="632602" fdprocessedid="sau07s"><input type="text" name="locality" placeholder="Locality" required="" value="Chennai" fdprocessedid="z9w90a"><input type="text" name="city" placeholder="City" required="" value="CHENNAI" fdprocessedid="hbf212"><input type="text" name="state" placeholder="State" required="" value="TAMIL NADU" fdprocessedid="a6dl2d"><input type="text" name="panno" placeholder="PAN No" value="AAACS4949P" fdprocessedid="0kjz8n"><input type="text" name="gstin" placeholder="GSTIN" value="33AAACS4949P1ZU" fdprocessedid="0e8jye"><input type="text" name="branchType" placeholder="Branch Type" required="" value="Corporate Office" fdprocessedid="yo9561"><h5 style="color: gray; font-size: 17px; margin-left: 13px; margin-top: 5px;"> Vehicle Type</h5><div style="display: flex;">      <label style="color: gray; font-size: 15px;"><input type="checkbox">Select All</label><label style="color: gray; font-size: 15px; display: inline;"><input type="checkbox" name="vehicleType" value="Car">Car</label><label style="color: gray; font-size: 15px; display: inline;"><input type="checkbox" name="vehicleType" value="Bike">Bike</label><label style="color: gray; font-size: 15px; display: inline;"><input type="checkbox" name="vehicleType" value="Truck">Truck</label></div><h3>2. Branch Contact Details</h3><input type="text" name="branchContactNo" placeholder="Contact No" value="044285323461" fdprocessedid="z14mu"><input type="text" name="branchAlternateContactNo" placeholder="Alternate Contact No" value="9940093856" fdprocessedid="836g4p"><input type="text" name="branchWhatsappNo" placeholder="Whatsapp Number" value="" fdprocessedid="g4led"><input type="email" name="branchEmailID" placeholder="Email Id" value="s." fdprocessedid="gzsqhk"><h3>3. Branch Incharge Details</h3><input type="text" name="inchargerName" placeholder="Branch Incharge Name" value="" fdprocessedid="50fyxd"><input type="text" name="inchargerContactNo" placeholder="Incharge Contact No" value="" fdprocessedid="mf1yubo"><input type="text" name="inchargerAlternativeContactNo" placeholder="Alternative Contact No" value="" fdprocessedid="8k7yre"><input type="text" name="inchargerWhatsappNo" placeholder="Incharge Whatsapp No" value="" fdprocessedid="oklwo"><input type="email" name="inchargerEmailID" placeholder="Email Id" value="" fdprocessedid="xihf4i"><h3>4. Contact Person Details</h3><input type="text" name="contactPersonName" placeholder="Contact Person Name" value="" fdprocessedid="ogjv2"><input type="text" name="contactPersonContactNo" placeholder="Contact Person Contact No" value="" fdprocessedid="e8ka8o"><input type="text" name="contactPersonNameAlternateContactNo" placeholder="Alternative Contact No" value="" fdprocessedid="z65ib"><input type="text" name="contactPersonWhatsappNo" placeholder="Whatsapp No" value="" fdprocessedid="4tibld"><input type="email" name="contactPersonEMailID" placeholder="Email Id" value="" fdprocessedid="8x68w8"><h3>5. Opening Details</h3><div style="display: flex; align-items: center;"><label for="openingBalance" style="color: gray;">Opening Balance</label><input type="number" id="openingBalance" placeholder="0" fdprocessedid="496o6m" style="width: 36.4%;"></div><div style="display: flex; align-items: center;"><label for="openingDate" style="color: gray;">Opening Date</label><input type="date" id="openingDate" style="width: 36.4%; margin-left: 38px;"></div><h3>6. Advance Request Details</h3><div style="display: flex; align-items: center;"><label for="minimumAmount" style="color: gray;">Minimum Amount</label><input type="number" id="minimumAmount" placeholder="0" fdprocessedid="284z" style="width: 28%; margin-left: 107px;"></div><div style="display: flex; align-items: center;"><label for="maximumAmount" style="color: gray;">Maximum Amount</label><input type="number" id="maximumAmount" placeholder="0" fdprocessedid="u1epqw" style="width: 28%; margin-left: 104px;"></div><div style="display: flex; align-items: center;"><label for="monthlyMaximumAmount" style="color: gray;">Monthly Maximum Amount</label><input type="number" id="monthlyMaximumAmount" placeholder="0" fdprocessedid="cdbvsa" style="width: 28%; margin-left: 39px;"></div><div style="display: flex; align-items: center;"><label for="maximumUnsettledAmountt" style="color: gray;">Maximum Unallocated Amount</label><input type="number" id="maximumUnsettledAmount" placeholder="0" fdprocessedid="ucp3k5" style="width: 28%;"></div><div style="display: flex; align-items: center;"><label for="effectiveDate" style="color: gray;">Effective Date</label><input type="date" id="effectiveDate" style="width: 28%; margin-left: 137px;"></div><div style="display: flex; justify-content: space-between;"><h3>7. Bank Details</h3><button type="button" fdprocessedid="yqmwrl" style="background-color: blue;"><svg stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" height="1em" width="1em" xmlns="http://www.w3.org/2000/svg" style="color: white; font-weight: bold; font-size: 20px;"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="8" x2="12" y2="16"></line><line x1="8" y1="12" x2="16" y2="12"></line></svg></button></div><div style="margin-bottom: 20px;"><input type="text" name="accountNumber" placeholder="Account Number" value="" fdprocessedid="m8z0b8"><input type="text" name="accountHolderName" placeholder="Account Holder Name" value="" fdprocessedid="dljt1"><input type="text" name="ifscCode" placeholder="IFSC Code" value="" fdprocessedid="qkk64"><input type="text" name="bankName" placeholder="Bank Name" value="" fdprocessedid="usr6se"><input type="text" name="branchBankName" placeholder="Branch Name" value="" fdprocessedid="0opp9l"></div><br><label>Status:<input type="checkbox" name="status" checked=""></label><button type="button" fdprocessedid="0os6dp">Discard</button><button type="submit" fdprocessedid="0o5bgn">Submit</button></form></section></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
+
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
+
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  
+
+<span id="PING_IFRAME_FORM_DETECTION" style="display: none;"></span></body></html>
