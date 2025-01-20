@@ -64,12 +64,13 @@ const EditBranch = () => {
       axios
         .get(`${API_URL}/api/branches/${branchCode}`)
         .then((response) => {
-          setFormData(response.data);
+          const fetchedData = response.data;
+          setFormData({
+            ...fetchedData,
+            vehicleType: fetchedData.vehicleType || [],  // Ensures vehicleType is an array
+          });
         })
-        .catch((error) => {
-          console.error("Error fetching branch data:", error);
-        });
-    }
+      }
   }, [branchCode]);
 
   const handleDiscard = () => {
