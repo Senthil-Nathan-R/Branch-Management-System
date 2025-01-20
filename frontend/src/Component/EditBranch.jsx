@@ -67,7 +67,7 @@ const EditBranch = () => {
           const fetchedData = response.data;
           setFormData({
             ...fetchedData,
-            vehicleType: fetchedData.vehicleType || [],  // Ensures vehicleType is an array
+            vehicleType: Array.isArray(fetchedData.vehicleType) ? fetchedData.vehicleType : []
           });
         })
       }
